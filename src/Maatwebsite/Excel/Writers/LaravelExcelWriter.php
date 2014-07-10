@@ -462,7 +462,7 @@ class LaravelExcelWriter {
 
         // Calculation settings
         $this->writer->setPreCalculateFormulas(Config::get('excel::export.calculate', true));
-		$this->writer->setIncludeCharts(true);
+		$this->writer->setIncludeCharts(Config::get('excel::export.charts', false));
 
         return $this->writer;
     }
